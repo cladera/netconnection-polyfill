@@ -1,0 +1,26 @@
+{
+  "name": "netconnection-polyfill",
+  "version": "0.0.1",
+  "description": "Flash's NetConnection support for browsers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "netconnection",
+    "flash",
+    "polyfill"
+  ],
+  "author": "cgcladera",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-latest": "^6.16.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-browserify": "^5.0.0",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "dependencies": {
+    "object.assign": "^4.0.4"
+  }
+}
