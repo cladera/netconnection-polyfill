@@ -28,6 +28,9 @@ module.exports = function(grunt) {
       }
     },
     copy: {
+      options: {
+        processContentExclude: ['**/*.{png,gif,jpg,ico,psd,swf}']
+      },
       swf:   {
         cwd: 'node_modules/netconnection-polyfill-swf/dist/',
         src: 'netconnection-polyfill.swf',
