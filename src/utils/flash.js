@@ -4,7 +4,6 @@ import assign from 'object.assign';
 export function embed(swf, flashVars, params, attributes) {
   const code = getEmbedCode(swf, flashVars, params, attributes);
 
-  console.log(code);
   // Get element by embedding code and retrieving created element
   const obj = Dom.createEl('div', { innerHTML: code }).childNodes[0];
 

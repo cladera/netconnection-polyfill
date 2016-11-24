@@ -1,8 +1,12 @@
 {
   "name": "netconnection-polyfill",
-  "version": "0.0.1",
+  "version": "1.0.0-aplpha.0",
   "description": "Flash's NetConnection support for browsers",
-  "main": "index.js",
+  "main": "dist/netconnection-polyfill.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/cladera/netconnection-polyfill.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,9 +22,12 @@
     "grunt": "^1.0.1",
     "grunt-babel": "^6.0.0",
     "grunt-browserify": "^5.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-copy": "^0.1.0",
     "load-grunt-tasks": "^3.5.2"
   },
   "dependencies": {
+    "netconnection-polyfill-swf": "^1.0.0-alpha.0",
     "object.assign": "^4.0.4"
   }
 }
