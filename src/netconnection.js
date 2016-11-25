@@ -1,3 +1,4 @@
+import document from 'global/document';
 import EventTarget from './event-target.js';
 import * as Dom from './utils/dom.js';
 import * as Guid from './utils/guid.js';
@@ -206,8 +207,5 @@ NetConnection.onClientCall = function(swfID, method, ...args) {
     }
   },1);
 };
-
-// TODO: Not sure if this is the best way to make NetConnection global
-window['NetConnection'] = NetConnection;
 
 export default NetConnection;

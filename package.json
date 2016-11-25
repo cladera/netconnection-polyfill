@@ -1,6 +1,6 @@
 {
   "name": "netconnection-polyfill",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "Flash's NetConnection support for browsers",
   "main": "dist/netconnection-polyfill.js",
   "repository": {
@@ -18,6 +18,10 @@
   "author": "cgcladera",
   "license": "MIT",
   "devDependencies": {
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-inline-json": "^1.1.1",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.8.0",
+    "babel-plugin-transform-es3-property-literals": "^6.8.0",
     "babel-preset-latest": "^6.16.0",
     "grunt": "^1.0.1",
     "grunt-babel": "^6.0.0",
@@ -27,6 +31,7 @@
     "load-grunt-tasks": "^3.5.2"
   },
   "dependencies": {
+    "global": "^4.3.1",
     "netconnection-polyfill-swf": "^1.0.0-alpha.0",
     "object.assign": "^4.0.4"
   }

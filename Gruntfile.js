@@ -17,15 +17,15 @@ module.exports = function(grunt) {
       }
     },
     browserify: {
-      dist: {
-        src: ['es5/**/*.js'],
-        dest: 'dist/netconnection-polyfill.js'
-      },
       options: {
         browserifyOptions: {
-          standalone: 'somefunc'
+          standalone: 'NetConnection'
         }
-      }
+      },
+      dist: {
+        src: ['es5/netconnection.js'],
+        dest: 'dist/netconnection-polyfill.js'
+      },
     },
     copy: {
       options: {
