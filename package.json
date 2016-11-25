@@ -1,6 +1,6 @@
 {
   "name": "netconnection-polyfill",
-  "version": "1.0.0-aplpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Flash's NetConnection support for browsers",
   "main": "dist/netconnection-polyfill.js",
   "repository": {
