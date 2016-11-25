@@ -1,0 +1,9 @@
+node_modules
+
+sandbox/*
+
+dist/*
+!dist/netconnection-polyfill.js
+!dist/netconnection-polyfill.swf
+
+es5/*
