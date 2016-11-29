@@ -1,6 +1,6 @@
 {
   "name": "netconnection-polyfill",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Flash's NetConnection support for browsers",
   "main": "dist/netconnection-polyfill.js",
   "repository": {
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "global": "^4.3.1",
-    "netconnection-polyfill-swf": "^1.0.0-alpha.0",
+    "netconnection-polyfill-swf": "^1.0.0-alpha.3",
     "object.assign": "^4.0.4"
   }
 }
