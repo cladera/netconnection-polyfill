@@ -54,10 +54,6 @@ class NetConnection extends EventTarget {
     return this._el.nc_getProperty('connectedProxyType');
   }
 
-  get	defaultObjectEncoding() {
-    return this._el.nc_getProperty('defaultObjectEncoding');
-  }
-
   get	farID() {
     return this._el.nc_getProperty('farID');
   }
