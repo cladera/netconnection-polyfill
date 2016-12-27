@@ -127,7 +127,16 @@ class NetConnection extends EventTarget {
   }
 
   call(command, ...args) {
-    return this._el.nc_call(command, ...args);
+    return new Promise((resolve, reject) => {
+      const handlerId = command + Guid.newGUID();
+      NetConnection._pendingCallResponders[handlerId] = function(error, result) {
+        if (error) {
+          return reject(error);
+        }
+        resolve(result);
+      };
+      this._el.nc_call(command, handlerId, ...args);
+    });
   }
 
   close() {
@@ -199,9 +208,21 @@ NetConnection.onClientCall = function(swfID, method, ...args) {
 
   setTimeout(() => {
     if (nc.client && Object.getPrototypeOf(nc.client).hasOwnProperty(method)) {
-      nc.client[method](...args);
+      nc.client[method].apply(nc.client, args);
     }
   },1);
 };
+
+NetConnection.onClientCallResult = function(swfId, handlerId, ... args) {
+  const nc = Dom.getEl(swfId).nc;
+
+  setTimeout(() => {
+    const handler = NetConnection._pendingCallResponders[handlerId];
+    handler.apply(nc, ... args);
+    delete NetConnection._pendingCallResponders[handler];
+  },1);
+};
+
+NetConnection._pendingCallResponders = {};
 
 export default NetConnection;
